@@ -8,17 +8,21 @@ import './App.css';
 import Todos from './Todos/Todos';
 import AppBody from './AppBody';
 
-function handleTouchTap() {
-  alert('onTouchTap triggered on the title component');
-}
+
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       user: 'Mike',
-      renderTodos: true
+      renderTodos: false,
     };
+
+    this.handleTouchTap = this.handleTouchTap.bind(this);
+  }
+
+  handleTouchTap() {
+    this.setState({renderTodos: !this.state.renderTodos});
   }
 
   render() {
@@ -28,7 +32,7 @@ class App extends Component {
         {this.state.renderTodos ? <Todos /> : undefined}
         <AppBar 
         title={this.state.user} 
-        onRightIconButtonTouchTap={handleTouchTap}
+        onRightIconButtonTouchTap={this.handleTouchTap}
         iconElementLeft={<IconButton><ViewModule></ViewModule></IconButton>}
         iconElementRight={<IconButton><List></List></IconButton>}
         style={{
