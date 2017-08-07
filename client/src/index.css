@@ -3,4 +3,6 @@ body {
   padding: 0;
   background: linear-gradient(to left, #74B3F7, #0B69DF);
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
 }

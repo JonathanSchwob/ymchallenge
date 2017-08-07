@@ -5,8 +5,11 @@ import muiThemeable from 'material-ui/styles/muiThemeable';
 const AppBody = (props) => (
   <div style={{
     color: props.muiTheme.palette.textColor,
-    width: '35%',
     margin: '0 auto',
+    maxWidth: '500px',
+    display: 'flex',
+    position: 'relative',
+    top: '100',
     backgroundColor: props.muiTheme.palette.primary1Color,
   }}>
     <TextField />

@@ -4,7 +4,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import List from 'material-ui/svg-icons/action/list';
 import ViewModule from 'material-ui/svg-icons/action/view-module';
-import './App.css';
 import Todos from './Todos/Todos';
 import AppBody from './AppBody';
 
@@ -36,8 +35,11 @@ class App extends Component {
         iconElementLeft={<IconButton><ViewModule></ViewModule></IconButton>}
         iconElementRight={<IconButton><List></List></IconButton>}
         style={{
-          width: '35%',
           margin: '0 auto',
+          maxWidth: '500px',
+          display: 'flex',
+          position: 'relative',
+          top: '100'
         }}>
         </AppBar>
         <AppBody />
