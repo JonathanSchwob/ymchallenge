@@ -26,9 +26,8 @@ const AppBody = (props) => (
       value={props.text}
       onChange={props.handleChangeTextField}
       onKeyPress={(ev) => {
-        console.log(`Pressed keyCode ${ev.key}`);
         if (ev.key === 'Enter') {
-          props.openDatePicker();
+          props.openDateTimePicker();
           ev.preventDefault();
         }
       }}
